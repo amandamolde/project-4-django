@@ -4,7 +4,7 @@ from .models import Post, Comment
 class PostSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Post
-        fields = ('id', 'date', 'title', 'body', 'img_url', 'posts')
+        fields = ('id', 'date', 'title', 'body', 'img_url')
 
 
 class CommentSerializer(serializers.HyperlinkedModelSerializer):
