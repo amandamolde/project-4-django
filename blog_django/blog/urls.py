@@ -2,8 +2,8 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    path('', views.PostList.as_view()),
-    path('<int:pk>/', views.PostDetail.as_view()),
-    path('<int:pk>/comments/', views.CommentList.as_view()),
-    path('<int:pk>/comments/<int:id>/', views.CommentDetail.as_view()),
+    path('posts/', views.PostList.as_view()),
+    path('posts/<int:pk>/', views.PostDetail.as_view()),
+    path('posts/<int:pk>/comments/', views.CommentList.as_view()),
+    path('posts/<int:pk>/comments/<int:id>/', views.CommentDetail.as_view()),
 ]
